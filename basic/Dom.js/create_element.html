@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create new element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="laungae">
+        <li>java script</li>
+    </ul>
+    
+</body>
+<script>
+    // const div= document.createElement('div')
+    // console.log(div)
+    // div.className="main"
+    // // div.id="myid"
+    // // div.id=Math.random() * 10
+    // div.id=Math.round(Math.random() * 10 )
+    // div.setAttribute("title","title here")
+    // div.style.backgroundColor ="green"
+    // div.style.padding="10px"
+    // // div.innerText ="hello world"
+    // const text =  document.createTextNode("hello world")
+    // div.appendChild(text)
+
+
+    // document.body.appendChild(div)
+
+  function addlaunage (lanuname){
+     const li = document.createElement('li');
+    li.innerHTML =`${lanuname}`;
+    document.querySelector(`.laungae`).appendChild(li)    
+    }
+    addlaunage('python');
+    addlaunage('java');
+
+    function addoptilaung (lanuname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lanuname));
+        document.querySelector(`.laungae`).appendChild(li);
+            }
+            addlaunage('css');
+            addlaunage('react');
+
+            //edit
+            const edit = document.querySelector("li:nth-child(2)")
+            // console.log(edit)
+            // // edit.innerHTML="MOJO"
+            // const newlaung = Document.createElement('li')
+            // newlaung.textContent ='mojo'
+            // edit.replaceWith(newlaung);
+
+            edit.outerHTML='<li>typescript</li>'
+
+            //remove
+
+            const lastlung= document.querySelector('li:last-child')
+            lastlung.remove()
+</script>
+</html>

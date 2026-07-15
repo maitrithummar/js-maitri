@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello javascript</h1>
+    <button id="start">start button</button>
+    <button id="stop">stop button</button>
+</body>
+<script>
+
+//     const name = function(){
+//         console.log('maitri')
+//     }
+
+//    const changetext = function(){
+//      document.querySelector('h1').innerHTML="best js"
+//    }
+//    const changeme = setTimeout(changetext ,2000)
+
+//    document.querySelector('.main').addEventListener('click' ,function(){
+//     clearTimeout(changeme)
+//     console.log('stopped');
+//    })
+    
+
+    // setInterval(() => {
+    //     console.log('hello')
+    //      console.log('hello 2')
+    // }, 2000);
+
+        // const settime = function(){
+        // console.log("hello",Date.now())
+    //   const start= document.querySelector('#start').addEventListener('click',function(e){
+    //     console.log("hello",Date.now())
+    //    })
+    //        const intervalid =  setInterval(start,1000)
+
+    //        const stop = document.querySelector('#stop').addEventListener('click',function(e){
+    //         clearInterval(intervalid)
+    //        })
+             let myInterval;
+
+    document.querySelector('#start').addEventListener('click', function () {
+    myInterval = setInterval(function () {
+        console.log('hello', Date.now());
+    }, 1000);
+});
+
+document.querySelector('#stop').addEventListener('click', function () {
+    clearInterval(myInterval);
+    console.log('Stopped');
+});
+</script>
+</html>
